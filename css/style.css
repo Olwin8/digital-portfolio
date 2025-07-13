@@ -1358,6 +1358,14 @@ footer {
     object-fit: cover;
 }
 
+/* Make video taller only in project-verde-vista.html */
+body.project-verde-vista .project-detail-section .video-wrapper video {
+    height: 590px;
+    max-height: 80vh;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* ========== Image/Video Lightbox ========== */
 .lightbox {
     position: fixed;

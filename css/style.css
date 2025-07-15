@@ -775,7 +775,8 @@ nav {
 /* Side arrows for project slider */
 .slider-controls.side-arrows {
     position: absolute;
-    top: 65%; /* Move arrows further down (was 50%) */
+    top: 65%;
+    /* Move arrows further down (was 50%) */
     left: 0;
     width: 100%;
     transform: translateY(-50%);
@@ -801,7 +802,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     transition: background 0.2s, transform 0.2s;
     margin: 0 8px;
 }
@@ -815,7 +816,8 @@ nav {
 .slider-controls.side-arrows .slider-dots {
     position: absolute;
     left: 50%;
-    top: 430px; /* Move dots further down (was -48px) */
+    top: 430px;
+    /* Move dots further down (was -48px) */
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
@@ -1423,6 +1425,129 @@ body.project-verde-vista .project-detail-section .video-wrapper video {
 .media-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+}
+
+/* ========== Project Process ========== */
+.project-detail-section .project-process {
+    margin: 4rem 0;
+}
+
+.project-detail-section .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.project-detail-section .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--primary);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.project-detail-section .process-step {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.project-detail-section .step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.project-detail-section .step-content {
+    background-color: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    flex: 1;
+}
+
+.project-detail-section .step-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    .project-detail-section .process-steps::before {
+        left: 25px;
+    }
+
+    .project-detail-section .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ========== Project Learnings ========== */
+.project-detail-section .project-learnings {
+    margin: 4rem 0;
+}
+
+.project-detail-section .learnings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-detail-section .learning-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border-top: 4px solid var(--primary);
+}
+
+.project-detail-section .learning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-detail-section .learning-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-detail-section .learning-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+}
+
+@media (max-width: 768px) {
+    .project-detail-section .learnings-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ========== Responsive Styles ========== */
